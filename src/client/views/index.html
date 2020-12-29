@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Application</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+    <!-- <link rel="stylesheet" href="/styles/base.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body class="body-section">
+    <header class="header-section">
+        <nav class="navbar sticky-top navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Travel App</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="main-section">
+        <section class="info-section">
+            <div class="info-section-title">Welcome to our Travel App! 🎉</div>
+            <div class="info-section-p">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti ab dignissimos veniam facilis consequuntur reiciendis ducimus nihil autem, officiis omnis fugit sit perferendis necessitatibus consectetur exercitationem libero animi labore maxime.
+            </div>
+        </section>
+        <section class="form-section shadow-sm p-3 mb-5 bg-white rounded">
+            <form class="form" onsubmit="setTimeout(function(){window.location.reload();},10);">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" name="fromCity" id="fromCity" placeholder="Riyadh">
+                    <label for="from-city">From:</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control toCity" name="toCity" id="toCity" placeholder="London" required>
+                    <label for="to-city">To:</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="depDate" name="depDate" required>
+                    <label for="date-input">Departing date:</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="date" class="form-control" id="retDate" name="retDate" required>
+                    <label for="date-input">Returning date:</label>
+                </div>
+
+                <button type="submit" value="submit" class="btn btn-primary submit-btn">Submit</button>
+            </form>
+        </section>
+        <section class="data-section shadow-sm p-3 mb-5 bg-white rounded hide">
+            <figure class="city-figure">
+                <img class="city-image" src="" alt="No pic found for this city">
+                <!-- <figcaption>City x</figcaption> -->
+            </figure>
+            <div class="data">
+                <div class="From-To">
+                    Trip:
+                    <div class="from-text">From <span class="from-city"></span></div>
+                    To <span class="to-city"></span>
+                </div>
+                <div>Your trip will be for <span class="tripDays"></span> days</div>
+                <div><span class="days-away"></span> days left until leaving!</div>
+                <div class="date-info">Departing Date: <span class="date-text"></span></div>
+                <div class="date-info">Returning Date: <span class="date-text-2"></span></div>
+                <div class="weather-info">
+                    <div>Tempreture: <span class="temp"></span></div>
+                    <div>Weather: <span class="weather"></span></div>
+                </div>
+                <!-- <a href="#" class="add-link">Add</a>
+                <a href="#" class="remove-link">remove</a> -->
+                <!-- <a href="#" data-toggle="modal" data-target="#myModal" class="showall-link">Show All Trips</a> -->
+
+            </div>
+        </section>
+    </main>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+    <footer class="footer-section">
+        <div>Travel app - Udacity Capstone project</div>
+        <div>Developed by Seham Alzahrani</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW " crossorigin="anonymous "></script>
+</body>
+
+</html>
